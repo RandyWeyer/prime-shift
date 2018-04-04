@@ -8,20 +8,30 @@ function generateRange(number) {
 }
 
 function excludeNonPrime(range) {
+  var newRange = [];
   for (var j=2; j<=range.length; j++) {
-    for (var p=2; p<range.length; p++) {
-      if ((j*p) === range[j]) {
-        var newRange = range.slice
-      }
-    }
-    if ((j*p) ===
-
-    range.forEach(function(number)) {
-      var count = 1;
-      while (count<range.length) {
-        (count*p) === number;
-
+    for (var p=0; p<j; p++) {
+      if ((j%p) !== 0) {
+        newRange.push(range[j]);
       }
     }
   }
+  return newRange;
 }
+
+$(document).ready(function() {
+  $("form#prime").submit(function(event) {
+    event.preventDefault();
+
+    var inputNumber = parseInt($("#number").val());
+
+    var inputRange = generateRange(inputNumber);
+    console.log(inputRange);
+
+    var newOutput = excludeNonPrime(inputRange);
+    console.log(newOutput);
+
+    $("#answer").text(newOutput);
+    $("#result").show();
+  });
+});
