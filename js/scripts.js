@@ -1,4 +1,5 @@
-var newRange = [];
+
+
 function generateRange(number) {
   range = [];
   for (var i=2; i<=number; i++) {
@@ -8,6 +9,7 @@ function generateRange(number) {
 }
 
 function excludeNonPrime(range) {
+  var newRange = [];
   for (var j=0; j<range.length; j++) {
     var jIsPrime = true;
     for (var prime=2; prime<range[j]/2; prime++) {
@@ -26,6 +28,7 @@ function excludeNonPrime(range) {
 $(document).ready(function() {
   $("form#prime").submit(function(event) {
     event.preventDefault();
+    newOutput = "";
 
     var inputNumber = parseInt($("#number").val());
 
@@ -35,7 +38,7 @@ $(document).ready(function() {
     var newOutput = excludeNonPrime(inputRange);
     console.log(newOutput);
 
-    $("#answer").text(newOutput);
+    $(".output").text(newOutput);
     $("#result").show();
   });
 });
