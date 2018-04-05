@@ -2,11 +2,11 @@
 
 #### _This webpage takes a number from a user and returns a range of prime numbers less than the input number, 3/31/18_
 
-#### By _**Azamat Bekmuratov**_
+#### By _**Azamat Bekmuratov, Randy Weyer**_
 
 ## Description
 
-This webpage returns a range of prime numbers less than the input number
+This webpage returns a range of prime numbers between 0 and the input number
 
 ## Setup/Installation Requirements
 
@@ -23,5 +23,5 @@ This webpage returns a range of prime numbers less than the input number
 
 ## License
 
-##### Copyright (c) 2018 **_Azamat Bekmuratov_**
+##### Copyright (c) 2018 _**Randy Weyer, Azamat Bekmuratov**_
 ##### This software is licensed under the GPL License
